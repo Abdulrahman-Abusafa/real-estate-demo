@@ -1,0 +1,59 @@
+{
+  "hero": {
+    "badge": "Future of Living",
+    "title_prefix": "Find",
+    "title_suffix": "Sanctuary.",
+    "subtitle": "Experience the next generation of real estate in Saudi Arabia. Verified, seamless, and completely transparent.",
+    "search_placeholder": "Search..."
+  },
+  "search_bar": {
+    "buy": "Buy",
+    "rent": "Rent",
+    "commercial": "Commercial",
+    "search_btn": "Search",
+    "location": "Location",
+    "property_type": "Property Type",
+    "price_range": "Price Range",
+    "beds_baths": "Beds & Baths",
+    "any_beds": "Any Beds",
+    "any_price": "Any Price"
+  },
+  "bento": {
+    "verified_title": "100% Verified",
+    "verified_desc": "Every listing is physically verified. We don't deal with fakes.",
+    "verification_report": "Verification Report",
+    "id": "ID",
+    "passed": "Passed",
+    "ownership": "Ownership Document",
+    "inspection": "Site Inspection",
+    "location": "Location Check",
+    "stats_active": "Active Listings",
+    "stats_families": "Happy Families",
+    "stats_time": "Avg. Sold Time",
+    "fast": "Fast",
+    "owners_title": "Direct Owners",
+    "owners_desc": "Connect directly.",
+    "support_title": "24/7 Support",
+    "support_desc": "Always here for you.",
+    "online": "Online Now"
+  },
+  "featured": {
+    "title": "Featured Residences",
+    "subtitle": "Handpicked exclusive properties for the discerning buyer",
+    "view_all": "View All Properties",
+    "view_all_mobile": "View All Properties"
+  },
+  "cta": {
+    "title": "List Your Property With Us",
+    "subtitle": "Join the Kingdom's fastest-growing premium real estate network.",
+    "start_btn": "Start Listing Now",
+    "learn_btn": "Learn More"
+  },
+  "nav": {
+    "buy": "Buy",
+    "rent": "Rent",
+    "commercial": "Commercial",
+    "find_agent": "Find Agent",
+    "list": "List"
+  }
+}

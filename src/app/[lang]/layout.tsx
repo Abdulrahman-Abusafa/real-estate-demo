@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Cairo, Inter } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import "./globals.css";
+import "../globals.css";
 
 const cairo = Cairo({
   subsets: ["arabic", "latin"],
@@ -21,17 +21,25 @@ export const metadata: Metadata = {
   description: "Premium Real Estate in Saudi Arabia",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ lang: string }>;
+}) {
+  const { lang } = await params;
+  const dir = lang === "ar" ? "rtl" : "ltr";
+  
+  // Cast lang to 'en' | 'ar' for Navbar types if needed, or update Navbar to accept string
+  const validLang = (lang === "ar" ? "ar" : "en") as "en" | "ar";
+
   return (
-    <html lang="ar" dir="rtl">
+    <html lang={lang} dir={dir}>
       <body
         className={`${cairo.variable} ${inter.variable} antialiased font-cairo bg-background text-foreground`}
       >
-        <Navbar />
+        <Navbar lang={validLang} />
         {children}
         <Footer />
       </body>

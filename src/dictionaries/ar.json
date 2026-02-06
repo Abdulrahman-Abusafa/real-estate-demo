@@ -1,0 +1,59 @@
+{
+    "hero": {
+        "badge": "مستقبل المعيشة",
+        "title_prefix": "اكتشف",
+        "title_suffix": "ملاذك.",
+        "subtitle": "جرب الجيل القادم من العقارات في المملكة العربية السعودية. موثقة، سلسة، وشفافة تماماً.",
+        "search_placeholder": "بحث..."
+    },
+    "search_bar": {
+        "buy": "شراء",
+        "rent": "إيجار",
+        "commercial": "تجاري",
+        "search_btn": "بحث",
+        "location": "الموقع",
+        "property_type": "نوع العقار",
+        "price_range": "نطاق السعر",
+        "beds_baths": "الأسرة والحمامات",
+        "any_beds": "أي عدد",
+        "any_price": "أي سعر"
+    },
+    "bento": {
+        "verified_title": "موثقة 100%",
+        "verified_desc": "يتم التحقق من كل قائمة فعلياً. لا نتعامل مع الوهم.",
+        "verification_report": "تقرير توثيق",
+        "id": "رقم",
+        "passed": "ناجح",
+        "ownership": "وثيقة الملكية",
+        "inspection": "فحص الموقع",
+        "location": "التحقق من الموقع",
+        "stats_active": "عقار نشط",
+        "stats_families": "عائلة سعيدة",
+        "stats_time": "معدل وقت البيع",
+        "fast": "سريع",
+        "owners_title": "ملاك مباشرين",
+        "owners_desc": "تواصل مباشرة.",
+        "support_title": "دعم 24/7",
+        "support_desc": "دائماً هنا لأجلك.",
+        "online": "متصل الآن"
+    },
+    "featured": {
+        "title": "عقارات مميزة",
+        "subtitle": "عقارات حصرية مختارة بعناية للمشتري المميز",
+        "view_all": "عرض جميع العقارات",
+        "view_all_mobile": "عرض جميع العقارات"
+    },
+    "cta": {
+        "title": "اعرض عقارك معنا",
+        "subtitle": "انضم إلى شبكة العقارات الأسرع نمواً في المملكة.",
+        "start_btn": "ابدأ العرض الآن",
+        "learn_btn": "اعرف المزيد"
+    },
+    "nav": {
+        "buy": "شراء",
+        "rent": "إيجار",
+        "commercial": "تجاري",
+        "find_agent": "اعثر على وكيل",
+        "list": "أضف عقارك"
+    }
+}

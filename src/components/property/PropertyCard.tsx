@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 import Image from "next/image";
 import { Heart, MapPin, BedDouble, Bath, Square, Phone, BadgeCheck } from "lucide-react";
 import { Property } from "@/lib/mockData";
@@ -16,6 +18,7 @@ interface PropertyCardProps {
 export default function PropertyCard({ property }: PropertyCardProps) {
   // Simplified image handling for Demo: Just use the first image or placeholder
   const mainImage = property.images[0] || "/placeholder";
+  const [imageError, setImageError] = useState(false);
 
   return (
     <motion.div
@@ -26,13 +29,21 @@ export default function PropertyCard({ property }: PropertyCardProps) {
       className="group relative bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-premium hover:shadow-premium-hover hover:border-accent/30 transition-all duration-500 ease-out"
     >
       <Link href={`/property/${property.id}`} className="block relative h-64 w-full bg-gray-200 overflow-hidden">
-        {/* Real Image */}
-        <Image
-          src={mainImage}
-          alt={property.title}
-          fill
-          className="object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out"
-        />
+        {/* Real Image with Fallback */}
+        {!imageError ? (
+            <Image
+            src={mainImage}
+            alt={property.title}
+            fill
+            className="object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out"
+            onError={() => setImageError(true)}
+            />
+        ) : (
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center group-hover:scale-110 transition-transform duration-700">
+                <span className="text-white/20 font-bold text-4xl">SH</span>
+            </div>
+        )}
+        
         <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent z-10 opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
         
         {/* Top Badges */}
