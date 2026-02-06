@@ -23,12 +23,17 @@ export default function PropertyCard({ property }: PropertyCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.4 }}
-      className="group relative bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300"
+      className="group relative bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-premium hover:shadow-premium-hover hover:border-accent/30 transition-all duration-500 ease-out"
     >
       <Link href={`/property/${property.id}`} className="block relative h-64 w-full bg-gray-200 overflow-hidden">
-        {/* Placeholder for Next/Image since we don't have real images in src. Using a colored div fallback if image fails or just a gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent z-10" />
-        <div className="absolute inset-0 bg-gray-300 animate-pulse group-hover:scale-105 transition-transform duration-700" />
+        {/* Real Image */}
+        <Image
+          src={mainImage}
+          alt={property.title}
+          fill
+          className="object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-transparent z-10 opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
         
         {/* Top Badges */}
         <div className="absolute top-4 left-4 z-20 flex flex-col gap-2">
@@ -46,14 +51,14 @@ export default function PropertyCard({ property }: PropertyCardProps) {
         </div>
 
          <div className="absolute top-4 right-4 z-20">
-             <button className="bg-white/80 p-2 rounded-full hover:bg-white transition-colors text-gray-700 hover:text-red-500">
+             <button className="bg-white/80 p-2 rounded-full hover:bg-white transition-colors text-gray-700 hover:text-red-500 shadow-sm">
                  <Heart size={18} />
              </button>
          </div>
 
          {/* Bottom Image Info */}
          <div className="absolute bottom-4 left-4 z-20 text-white">
-             <p className="text-2xl font-bold">{property.price.toLocaleString()} SAR</p>
+             <p className="text-2xl font-bold font-cairo drop-shadow-md">{property.price.toLocaleString()} SAR</p>
          </div>
       </Link>
 

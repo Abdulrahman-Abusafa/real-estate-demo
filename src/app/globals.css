@@ -39,3 +39,25 @@ body {
   color: var(--foreground);
   font-family: var(--font-cairo), sans-serif;
 }
+
+@layer utilities {
+  .text-gold-gradient {
+    @apply bg-gradient-to-r from-[#C69749] to-[#E5B973] bg-clip-text text-transparent;
+  }
+
+  .shadow-premium {
+    box-shadow: 0 10px 40px -10px rgba(11, 36, 71, 0.15);
+  }
+
+  .shadow-premium-hover {
+    box-shadow: 0 20px 50px -10px rgba(11, 36, 71, 0.25);
+  }
+
+  .glass-panel {
+    @apply bg-white/80 backdrop-blur-md border border-white/40;
+  }
+
+  .glass-panel-dark {
+    @apply bg-gray-900/60 backdrop-blur-md border border-white/10;
+  }
+}
